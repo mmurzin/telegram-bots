@@ -1,16 +1,16 @@
 package main
 
-
-import(
+import (
 	"log"
 	"os"
-	"github.com/joho/godotenv"
 	"time"
+
+	"github.com/joho/godotenv"
 
 	tele "gopkg.in/telebot.v3"
 )
 
-func main(){
+func main() {
 	err := godotenv.Load("../.env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
