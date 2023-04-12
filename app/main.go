@@ -16,7 +16,7 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 	pref := tele.Settings{
-		Token:  os.Getenv("TOKEN"),
+		Token:  os.Getenv("MMURZIN_TOKEN"),
 		Poller: &tele.LongPoller{Timeout: 10 * time.Second},
 	}
 
@@ -27,7 +27,7 @@ func main() {
 	}
 
 	b.Handle("/hello", func(c tele.Context) error {
-		return c.Send("Hello!")
+		return c.Send("Hello From Docker <3!")
 	})
 
 	b.Start()

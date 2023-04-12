@@ -7,6 +7,3 @@ services:
       dockerfile: ./docker-files/server/Dockerfile
     restart: always
     tty: true
-    ports:
-      - 80:80
-      - 443:443
